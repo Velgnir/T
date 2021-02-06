@@ -1,12 +1,12 @@
 #include <iostream>
 #include <thread>
 #include <vector>
-// створення процедури виводу номеру та рядка, яка далі буде вкористовуватися в роботі з масивом
+// stvorenia futsii dlia vvivodu nomer ta ryadke
 void print(int n, const std::string& str) {
 	std::cout << n << ":" << str << std::endl;
 }
 int main() {
-	// створення масиву
+	// stvorenya masivu
 	std::vector<std::string> s = {
 	"Educative.blog",
 	"Educative",
@@ -15,12 +15,12 @@ int main() {
 	};
 	// 
 	std::vector<std::thread> threads;
-	// багатопотчне виведення попереднього масиву
+	// bagatopotochne vivedenia poperedniogo masivu
 	for (int i = 0; i < s.size(); i++) {
 		threads.push_back(std::thread(print, i, s[i]));
 	}
 	for (auto& th : threads) {
-	    // гальмування головної функції доки "th" не закінчить свій процес
+	    // zatrimka golovnoi programi doki "th" ne zavershit svoyu zdzchu
 		th.join();
 	}
 	return 0;
