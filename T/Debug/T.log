@@ -1,0 +1,3 @@
+﻿  Source.cpp
+C:\Users\HOME\source\repos\T\Source.cpp(15,20): warning C4018: <: несоответствие типов со знаком и без знака
+  T.vcxproj -> C:\Users\HOME\source\repos\T\Debug\T.exe
